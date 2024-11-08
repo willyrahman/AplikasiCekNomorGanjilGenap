@@ -38,9 +38,19 @@ public class CekGenapGanjilFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Isi nomor");
 
+        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField1FocusGained(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
+            }
+        });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
             }
         });
 
@@ -161,6 +171,21 @@ public class CekGenapGanjilFrame extends javax.swing.JFrame {
             jLabel1.setText("Hasil akan ditampilkan di sini");
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+        // TODO add your handling code here:
+          jTextField1.setText("");
+          jLabel1.setText("Hasil akan ditampilkan di sini");
+    }//GEN-LAST:event_jTextField1FocusGained
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+         char c = evt.getKeyChar();
+                if (!Character.isDigit(c)) {
+                    evt.consume(); // Mencegah karakter non-angka
+                }
+    }//GEN-LAST:event_jTextField1KeyTyped
 
     /**
      * @param args the command line arguments
