@@ -38,5 +38,5 @@ Dengan aplikasi ini, Anda dapat dengan cepat mengecek karakteristik sebuah angka
 Willy Rahman (2210010103)
 
 ## Demo
-
+![Demo GIF](https://github.com/willyrahman/AplikasiCekNomorGanjilGenap/blob/main/img/Demo%20Cek%20Nomor%20Genap%20Ganjil.gif)
 
